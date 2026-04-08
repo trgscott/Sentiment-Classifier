@@ -45,7 +45,7 @@ ROC_plot_LSTM
 
 The training script also trains and evaluates a multilayer network that uses the same embedding dimension, hidden dimension, number of layers and similar dropout strategy as the LSTM. This is only included as a useful intermediate reference to help understand the different in performance of a recurrent network, a simple network, and logistic regression. In summary, the multilayer network sits firmly between Logistic Regression and the LSTM when it comes to the steepness of the training loss curve, F1 scores, and prediction distribution by class (density plots).
 
-Training loss plot
+![Training Loss](training_loss.png)
 
 F1 test set scores: Logistic Regression (X), Multilayer Network (Y), LSTM (Z).
 
