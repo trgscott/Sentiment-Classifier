@@ -30,7 +30,7 @@ The higher AUC value for Logistic Regression demonstrates that this model is lik
 
 Macro-averaged F1 scores also indicate stronger Logistic Regression performance: Logistic Regression (X), and LSTM (Y).
 
-### Bootstrapped p-value confirms Logistic regression AUC is significantly higher than for the LSTM
+### Bootstrapped p-value confirms Logistic Regression AUC is significantly higher than for the LSTM
 
 To test whether the AUC for the Logistic Regression model is significantly higher than the AUC for the LSTM model, bootstrapping is also used to estimate a p-value. The bootstrap_p_value function repeatedly resamples the test data with replacement and computes the difference in AUC between the two models (LSTM minus Logistic Regression). The p-value is then calculated as the proportion of bootstrap samples where this difference is less than or equal to zero (i.e. where the LSTM does not outperform Logistic Regression). In this case, a p-value > 0.95 would indicate that it is unlikely for the Logistic Regression model to perform no better than the LSTM by chance.
 
@@ -56,6 +56,7 @@ Density plot MLP
 Density plot LSTM
 
 ### Repository files
-training.py - the script for training and evaluation
-slurm_script.slurm - the script for running training.py on the Computational Shared Facility
-results.csv - the CSV file containing all evaluation metrics
+- training.py - the script for training and evaluation
+- slurm_script.slurm - the script for running training.py on the Computational Shared Facility
+- results.csv - the CSV file containing all evaluation metrics
+- plots of the training loss, density plots for each model, and roc curves for each model
