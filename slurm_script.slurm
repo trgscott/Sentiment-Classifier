@@ -1,5 +1,5 @@
 #!/bin/bash --login
-#SBATCH -J trgsrmcl2
+#SBATCH -J rmcl2
 #SBATCH -p gpuA40GB
 #SBATCH -G 1
 #SBATCH -t 0-4
