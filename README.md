@@ -40,20 +40,20 @@ The computed p-value is 1.0, providing very strong evidence that Logistic Regres
 
 Receiver Operating Characteristic curves further demonstrate the effectiveness of Logistic Regression performance, with a curve that reaches further into the top-left corner of the plot (higher true positives and lower false positives):
 
-![ROC Curve Logistic Regression](roc_curve_Logistic_Regression.png)
-![ROC Curve Logistic Regression](roc_curve_LSTM.png)
+![ROC Curve Logistic Regression](Graphs/roc_curve_Logistic_Regression.png)
+![ROC Curve Logistic Regression](Graphs/roc_curve_LSTM.png)
 
 ### Additional analysis
 
 The training script also trains and evaluates a multilayer network that uses the same embedding dimension, hidden dimension, number of layers and similar dropout strategy as the LSTM. This is only included as a useful intermediate reference to help understand the different in performance of a recurrent network, a simple network, and logistic regression. In summary, the multilayer network sits firmly between Logistic Regression and the LSTM when it comes to the steepness of the training loss curve, F1 scores, and prediction distribution by class (density plots). This again suggests that increasing model complexity without adapting preprocessing or training configurations can lead to weaker results.
 
-![Training Loss](training_loss.png)
+![Training Loss](Graphs/training_loss.png)
 
 F1 test set scores: Logistic Regression (0.857), Multilayer Network (0.841), LSTM (0.829).
 
-![Density Plot Logistic Regression](density_plot_Logistic_Regression.png)
-![Density Plot Multilayer Network](density_plot_Multilayer_Network.png)
-![Density Plot LSTM](density_plot_LSTM.png)
+![Density Plot Logistic Regression](Graphs/density_plot_Logistic_Regression.png)
+![Density Plot Multilayer Network](Graphs/density_plot_Multilayer_Network.png)
+![Density Plot LSTM](Graphs/density_plot_LSTM.png)
 
 ### Repository files
 - training.py - the script for training and evaluation
