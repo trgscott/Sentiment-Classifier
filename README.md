@@ -45,7 +45,7 @@ Receiver Operating Characteristic curves further demonstrate the effectiveness o
 
 ### Additional analysis
 
-The training script also trains and evaluates a multilayer network that uses the same embedding dimension, hidden dimension, number of layers and similar dropout strategy as the LSTM. This is only included as a useful intermediate reference to help understand the different in performance of a recurrent network, a simple network, and logistic regression. In summary, the multilayer network sits firmly between Logistic Regression and the LSTM when it comes to the steepness of the training loss curve, F1 scores, and prediction distribution by class (density plots). This again suggests that increasing model complexity without adapting preprocessing or training configurations can lead to weaker results.
+The training script also trains and evaluates a multilayer network that uses the same embedding dimension, hidden dimension, number of layers and similar dropout strategy as the LSTM. This is only included as a useful intermediate reference to help understand the difference in performance of a recurrent network, a simple network, and logistic regression. In summary, the multilayer network sits firmly between Logistic Regression and the LSTM when it comes to the steepness of the training loss curve, F1 scores, and prediction distribution by class (density plots). This again suggests that increasing model complexity without adapting preprocessing or training configurations can lead to weaker results.
 
 ![Training Loss](Graphs/training_loss.png)
 
@@ -59,5 +59,5 @@ F1 test set scores: Logistic Regression (0.857), Multilayer Network (0.841), LST
 - training.py - the script for training and evaluation
 - slurm_script.slurm - the script for running training.py on the Computational Shared Facility (CSF). Note that multiple packages were loaded on the command line prior to running this file (pytorch, matplotlib, pandas, numpy, sklearn, nltk, and the nltk stopwords). The compiled reviews were also uploaded. 
 - results.csv - the CSV file containing all evaluation metrics
-- plots of the training loss, density plots for each model, and roc curves for each model
+- Graphs - contains plots of the training loss, density plots for each model, and roc curves for each model
 - slum-13374611.out - output file from the CSF included for completeness.
