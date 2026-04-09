@@ -23,12 +23,12 @@ To capture the sequential nature of the input, this model extends the approach o
 
 ### Area Under the Curve (AUC) Scores indicate Logistic Regression outperforms LSTM
 
-1. Logistic Regression AUC = X
-2. LSTM AUC = Y
+1. Logistic Regression AUC = 0.927
+2. LSTM AUC = 0.902
 
-The higher AUC value for Logistic Regression demonstrates that this model is likely more effective than the LSTM at classifying positive and negative reviews, given the same data representation. Using bootstrapping on the AUC values further supports evidence of this performance gap as the average AUC and 95% confidence intervals suggest a consistent difference: Logistic Regression Bootstrapped AUC and 95% confidence interval (X_mean, Y_lower, Z_upper), LSTM Bootstraped AUC and 95% confidence interval (X_mean, Y_lower, Z_upper).
+The higher AUC value for Logistic Regression demonstrates that this model is likely more effective than the LSTM at classifying positive and negative reviews, given the same data representation. Using bootstrapping on the AUC values further supports evidence of this performance gap as the average AUC and 95% confidence intervals suggest a consistent difference: Logistic Regression Bootstrapped AUC and 95% confidence interval (mean 0.927, lower 0.919, upper 0.936), LSTM Bootstraped AUC and 95% confidence interval (mean 0.902, lower 0.891, upper 0.912).
 
-Macro-averaged F1 scores also indicate stronger Logistic Regression performance: Logistic Regression (X), and LSTM (Y).
+Macro-averaged F1 scores also indicate stronger Logistic Regression performance: Logistic Regression (0.857), and LSTM (0.829).
 
 ### Bootstrapped p-value confirms Logistic Regression AUC is significantly higher than for the LSTM
 
@@ -49,7 +49,7 @@ The training script also trains and evaluates a multilayer network that uses the
 
 ![Training Loss](training_loss.png)
 
-F1 test set scores: Logistic Regression (X), Multilayer Network (Y), LSTM (Z).
+F1 test set scores: Logistic Regression (0.857), Multilayer Network (0.841), LSTM (0.829).
 
 ![Density Plot Logistic Regression](density_plot_Logistic_Regression.png)
 ![Density Plot Multilayer Network](density_plot_Multilayer_Network.png)
@@ -60,3 +60,4 @@ F1 test set scores: Logistic Regression (X), Multilayer Network (Y), LSTM (Z).
 - slurm_script.slurm - the script for running training.py on the Computational Shared Facility
 - results.csv - the CSV file containing all evaluation metrics
 - plots of the training loss, density plots for each model, and roc curves for each model
+- slurm-13374611.out - the output file from running sbatch slurm_script.slurm on the Computational Shared Facility
