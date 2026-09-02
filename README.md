@@ -1,4 +1,4 @@
-# Sentiment Classification
+# Model Comparison on Sentiment Classification
 
 The training script in this repository is designed to train and evaluate two model types on the binary sentiment classification of Amazon product reviews. All experiments are designed to run on the GPU using PyTorch, and follow a reproducible pipeline. The pre-processing pipeline includes: lowercasing and punctuation removal, tokenisation using whitespace splitting, stopword removal, encoding tokens as integer indices, and padding sequences to a fixed length of 256 tokens. The data is split 80% training, 10% validation and 10% test. Training is run for 50 epochs with early stopping based on the validation loss.
 
